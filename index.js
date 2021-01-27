@@ -26,6 +26,17 @@ app.post("/login", (req, res) => {
         })
     }
 })
+app.get("/user", (req, res) => {
+    res.send({
+        username: 'zhangsan',
+        age: 18,
+        sex: 1,
+        avatar: "http://skintest.hetyj.com/30869/e0ae3ef163e1f251cd9313b1e285058b.jpeg",
+        phone: 13632632437,
+        email: '1107410953@163.com',
+        dec: "性别sex0是女,1就是男哦"
+    })
+})
 app.listen(80, "127.0.0.1", () => {
     console.log("服务已在127.0.0.1启动")
 })
